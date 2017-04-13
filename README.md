@@ -55,8 +55,87 @@ Need to know
 What table are available and at what times? Max number of guests per table
 If a table is reserved, we need to know who reserved the table and what his/her phone number is and number of guests
 
+* Tables
+  * <array> of table objects
+    * Table
+      * id
+      * max-capacity
+        * <number>
+      * available times
+        * <array>
+      * reserved times
+        <array>
 
-*
+* Reservations
+  * <array> of reservation objects
+    * Reservation
+      * id
+      * table id
+      * time
+        * <date>
+      * number of guests
+        * <number> has to be less than or equal to max-capacity of table associated with table id
+      * reserver
+        * name
+          * <string>
+        * phone number
+          * <number>
+
+<!-- You're building a backend for a university that requires students to be able to login. Once logged in, the students can view the exam grades for their classes. They should be able to view results by semester. Each semester should only show the classes in which that student is enrolled that semester.
+ -->
+
+* Students
+  * <array> of student objects
+    * Student
+      * id
+      * username
+        * <string>
+      * password
+        * <string> 7-12 word characters
+      * <array> of Semester object
+        * Semester
+          * id
+          * <array> of class object
+            * Class
+              * id
+              * grade
+
+
+<!-- Advanced -->
+
+<!-- Your eCommerce business needs to keep track of products and their prices. The products each belong to a department. The business needs to keep track of revenue as product prices change over time. The business also needs to keep track of receipts of transactions and the number of units each product has in stock. -->
+
+* Products
+  * <array> of product objects
+    * Product
+      * id
+      * name
+      * current price
+      * <array> of historic price objects
+        * Historic price
+          * date
+            *<date>
+          * price
+            * <number>
+
+* Departments
+  * <array> of department objects
+    * Department
+      * id
+      * <array> of product id
+
+* Business
+  * <array> of transaction objects
+    * Transaction
+      * id
+      * date
+      * product id
+      * number of units sold
+      * product price
+  * <array> of inventory objects
+    * Inventory
+      * product id
+      * stock
 
 
 
