@@ -137,5 +137,38 @@ If a table is reserved, we need to know who reserved the table and what his/her 
       * product id
       * stock
 
+<!--You're building an activity feed for a social media site. The feed must display a chronological list of activities for the current user's friends. These activities could potentially be any action performed on the site including uploading a photo, changing their profile, friending another user, commenting, liking etc... Further, you only want to display activities for users that the current user interacts with frequently.-->
+
+What do we need
+User has feeds, we need to know friends activities, and frequency of interaction
+Per friend's activity we need to know what time it occurred and friend frequency score
+
+
+* User
+    * id
+    * Feed
+        * <array> of friends activities
+            * friends_id
+                * <number>
+            * time
+                * <Date>
+            * type of activity
+                * <string>
+    * Friends
+        * <array> of friend + frequency score
+            * friends_id
+                * <number>
+            * frequency_score
+                * <number>
+    * Activities
+        * <array> of activities
+            * id
+                * <number>
+            * type of activity
+                * <string>
+
+
+
+
 
 
